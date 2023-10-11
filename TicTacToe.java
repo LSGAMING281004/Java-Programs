@@ -7,12 +7,12 @@ public class TicTacToe extends Applet implements ActionListener {
     Button buttons[] = new Button[9];
     int Playercount = 0, o;
     String Player1 = "X", Player2 = "O", Player = "X", c0, c1, c2, c3, c4, c5, c6, c7, c8;
-    Label Label1;
+    Label Label1,l3;
+    Font myFont = new Font("Serif", Font.BOLD, 99);
     public void init() {
         setLayout(null);
         Label1 = new Label("1.Player X     2.Player O");
         Label1.setBounds(50, 20, 5000, 100);
-        Font myFont = new Font("Serif", Font.BOLD, 40);
         Label1.setFont(myFont);
         add(Label1);
         for (int i = 0; i < 9; i++) {
@@ -98,28 +98,25 @@ public class TicTacToe extends Applet implements ActionListener {
             for (o = 0; o < 9; o++)
                 remove(buttons[o]);
             remove(Label1);
-            Label l3 = new Label("X Player WIN");
+            l3 = new Label("X Player WIN");
             l3.setBounds(300, 100, 2000, 1000);
             add(l3);
-            Font myFont = new Font("Serif", Font.BOLD, 99);
             l3.setFont(myFont);
         } else if ((c0 == "O" && c1 == "O" && c2 == "O") || (c3 == "O" && c4 == "O" && c5 == "O") || (c6 == "O" && c7 == "O" && c8 == "O") || (c0 == "O" && c3 == "O" && c6 == "O") || (c1 == "O" && c4 == "O" && c7 == "O") || (c2 == "O" && c5 == "O" && c8 == "O") || (c0 == "O" && c4 == "O" && c8 == "O") || (c2 == "O" && c4 == "O" && c6 == "O")) {
             for (o = 0; o < 9; o++)
                 remove(buttons[o]);
             remove(Label1);
-            Label l3 = new Label("O Player WIN");
+            l3 = new Label("O Player WIN");
             l3.setBounds(500, 100, 1000, 200);
             add(l3);
-            Font myFont = new Font("Serif", Font.BOLD, 99);
             l3.setFont(myFont);
         } else if (Playercount == 9) {
             for (o = 0; o < 9; o++)
                 remove(buttons[o]);
             remove(Label1);
-            Label l3 = new Label("Draw the match");
+            l3 = new Label("Draw the match");
             l3.setBounds(300, 200, 3000, 500);
             add(l3);
-            Font myFont = new Font("Serif", Font.BOLD, 99);
             l3.setFont(myFont);
         }
     }
