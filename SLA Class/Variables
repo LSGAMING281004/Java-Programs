@@ -1,0 +1,34 @@
+package com.dev;
+
+ 
+/* Variables are a container that holds data during the execution of the program every variable has
+a name , a identifier, a dataType , a value.*/
+
+//Type of variable
+
+// local variable-- Declared inside a method
+// instance variable-- Declared inside a class but outside the method.
+// static variable-- This is also known as class variable declared with a static key words shared across all instance of class
+public class Variables {
+	int isAge = 25;// Instance
+	static int id = 404; // Static variable
+	
+	public void myMethod()
+	{
+		int salary = 18000;// It is a local variable. Used only in the inner method
+		System.out.println(salary);
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		
+		Variables obj = new Variables();
+		obj.myMethod();
+		System.out.println(obj.isAge);//Instance - It is not a static variable so need to object
+		System.out.println(id);// Static - This is a static variable so no need to object
+		String name = "Lokesh";// Local variable
+		System.out.println(name);	
+	}
+
+}
