@@ -1,0 +1,39 @@
+package com.dev;
+import java.util.*;
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+
+		Queue<Integer> q = new LinkedList<>();
+		
+		q.add(3);
+		q.add(4);
+		q.add(8);
+		q.add(9);
+		
+		System.out.println("Head is "+q.peek());
+		System.out.println("Removed "+q.remove());
+		System.out.println("Removed poll "+q.poll());
+		System.out.println("Head is "+q.peek());
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<>();  
+	
+		pq.add(83);
+		pq.add(13);
+		pq.add(33);
+		pq.add(43);
+		
+		Iterator<Integer> it = pq.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
+		System.out.println("pri Head is "+pq.peek());
+		System.out.println("pri Removed "+pq.remove());
+		System.out.println("pri Head is "+pq.peek());
+
+
+	}
+
+}
