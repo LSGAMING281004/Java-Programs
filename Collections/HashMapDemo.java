@@ -1,6 +1,62 @@
 import java.util.HashMap;
 import java.util.Map;
+/*
+🔑 Major Types of Map in Java
+1. HashMap
+Stores data in hash table.
 
+No ordering of keys/values.
+
+Allows one null key and multiple null values.
+
+Fast for insert, search, and delete (average O(1)).
+
+2. LinkedHashMap
+Maintains insertion order of keys.
+
+Slightly slower than HashMap due to ordering.
+
+Allows one null key and multiple null values.
+
+Useful when predictable iteration order is required.
+
+3. TreeMap
+Implements NavigableMap and stores keys in sorted order (natural or custom comparator).
+
+Does not allow null keys (if natural ordering is used).
+
+Useful for range queries and ordered data.
+
+4. Hashtable
+Legacy class, synchronized (thread-safe).
+
+Does not allow null keys or null values.
+
+Slower compared to modern alternatives like ConcurrentHashMap.
+
+5. EnumMap
+Specialized map for enum keys.
+
+Very efficient and compact.
+
+Maintains natural order of enum constants.
+
+6. WeakHashMap
+Keys are stored as weak references.
+
+When a key is no longer referenced elsewhere, its entry is automatically removed.
+
+Useful for memory-sensitive caches.
+
+7. ConcurrentHashMap
+Thread-safe implementation for concurrent environments.
+
+Allows high concurrency with minimal locking.
+
+Does not allow null keys or null values.
+
+Preferred 
+*/
 // This is an example of hash map in java code
 public class HashMapDemo {
     public static void main(String[] args) {
@@ -59,4 +115,5 @@ public class HashMapDemo {
         System.out.println("After clearing: " + map);
     }
 }
+
 
