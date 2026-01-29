@@ -1,45 +1,60 @@
-package com.dev;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class HashMapDemo {
+    public static void main(String[] args) {
+        // 1. Create a HashMap
+        HashMap<Integer, String> map = new HashMap<>();
 
-	public static void main(String[] args) {
+        // 2. Insert key-value pairs
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Cherry");
+        map.put(4, "Date");
 
-		HashMap<Integer,String> hmap = new HashMap<>();
-		
-		hmap.put(1, "Loki");
-		hmap.put(3, "com");
-		hmap.put(2, "six");
-		hmap.put(6, "L");
-		System.out.println(hmap);
-		
-		Map<String, Integer> studentScores = new HashMap<>();
+        System.out.println("Initial Map: " + map);
 
-        // Add elements
-        studentScores.put("Alice", 95);
-        studentScores.put("Bob", 88);
-        studentScores.put("Charlie", 92);
+        // 3. Retrieve a value by key
+        String fruit = map.get(2);
+        System.out.println("Value at key 2: " + fruit);
 
-        // Get a value
-        System.out.println("Alice's score: " + studentScores.get("Alice")); // Output: Alice's score: 95
+        // 4. Update a value
+        map.put(2, "Blueberry"); // replaces Banana
+        System.out.println("After updating key 2: " + map);
 
-        // Update a value
-        studentScores.put("Bob", 90);
-        System.out.println("Bob's updated score: " + studentScores.get("Bob")); // Output: Bob's updated score: 90
+        // 5. Remove a key-value pair
+        map.remove(3);
+        System.out.println("After removing key 3: " + map);
 
-        // Check if a key exists
-        System.out.println("Contains 'Charlie'? " + studentScores.containsKey("Charlie")); // Output: Contains 'Charlie'? true
+        // 6. Check if a key exists
+        System.out.println("Contains key 1? " + map.containsKey(1));
 
-        // Remove an element
-        studentScores.remove("Charlie");
-        System.out.println("Contains 'Charlie' after removal? " + studentScores.containsKey("Charlie")); // Output: Contains 'Charlie' after removal? false
+        // 7. Check if a value exists
+        System.out.println("Contains value 'Date'? " + map.containsValue("Date"));
 
-        // Iterate through entries
-        for (Map.Entry<String, Integer> entry : studentScores.entrySet()) {
-            System.out.println("Student: " + entry.getKey() + ", Score: " + entry.getValue());
+        // 8. Iterate through keys
+        System.out.println("Iterating over keys:");
+        for (Integer key : map.keySet()) {
+            System.out.println("Key: " + key);
         }
-	}
 
+        // 9. Iterate through values
+        System.out.println("Iterating over values:");
+        for (String value : map.values()) {
+            System.out.println("Value: " + value);
+        }
+
+        // 10. Iterate through entries (key-value pairs)
+        System.out.println("Iterating over entries:");
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+
+        // 11. Size of the map
+        System.out.println("Size of map: " + map.size());
+
+        // 12. Clear all entries
+        map.clear();
+        System.out.println("After clearing: " + map);
+    }
 }
