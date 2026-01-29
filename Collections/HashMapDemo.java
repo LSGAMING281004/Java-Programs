@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+// This is an example of hash map in java code
 public class HashMapDemo {
     public static void main(String[] args) {
         // 1. Create a HashMap
@@ -58,3 +59,4 @@ public class HashMapDemo {
         System.out.println("After clearing: " + map);
     }
 }
+
